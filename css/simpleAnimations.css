@@ -1,0 +1,51 @@
+/*
+* simpleAnimation | v1.0.0
+* by Marko Arula.
+*/
+
+.simple-animation{
+  opacity: 0;
+}
+
+.animation-completed{
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-transition-timing-function:cubic-bezier(.78,.13,.15,.86);
+	transition-timing-function:cubic-bezier(.78,.13,.15,.86);
+}
+
+/*fade*/
+.animate-fade{opacity:0;}
+.animate-fade.animation-completed{-webkit-animation-name:fade;animation-name:fade;opacity:1;}
+@keyframes fade{from{opacity:0;}to{opacity:1;}}
+@-webkit-keyframes fade{from{opacity:0;}to{opacity:1;}}
+
+/*fade center*/
+.animate-afc{opacity:0;}
+.animate-afc.animation-completed{-webkit-animation-name:afc;animation-name:afc;opacity:1;}
+@keyframes afc{from{opacity:0;transform:scale(0.2);}to{opacity:1;transform:scale(1);}}
+@-webkit-keyframes afc{from{opacity:0;-webkit-transform:scale(0.2);}to{opacity:1;-webkit-transform:scale(1);}}
+
+/*fade left*/
+.animate-afl{opacity:0;}
+.animate-afl.animation-completed{-webkit-animation-name:afl;animation-name:afl;opacity:1;}
+@keyframes afl{from{opacity:0;transform:translateX(-50px);}to{opacity:1;transform:translateX(0);}}
+@-webkit-keyframes afl{from{opacity:0;-webkit-transform:translateX(-50px);}to{opacity:1;-webkit-transform:translateX(0);}}
+
+/*fade right*/
+.animate-afr{opacity:0;}
+.animate-afr.animation-completed{-webkit-animation-name:afr;animation-name:afr;opacity:1;}
+@keyframes afr{from{opacity:0;transform:translateX(50px);}to{opacity:1;transform:translateX(0);}}
+@-webkit-keyframes afr{from{opacity:0;-webkit-transform:translateX(50px);}to{opacity:1;-webkit-transform:translateX(0);}}
+
+/*fade top*/
+.animate-aft{opacity:0;}
+.animate-aft.animation-completed{-webkit-animation-name:aft;animation-name:aft;opacity:1;}
+@keyframes aft{from{opacity:0;transform:translateY(-50px);}to{opacity:1;transform:translateY(0);}}
+@-webkit-keyframes aft{from{opacity:0;-webkit-transform:translateY(-50px);}to{opacity:1;-webkit-transform:translateY(0);}}
+
+/*fade bottom*/
+.animate-afb{opacity:0;}
+.animate-afb.animation-completed{-webkit-animation-name:afb;animation-name:afb;opacity:1;}
+@keyframes afb{from{opacity:0;transform:translateY(50px);}to{opacity:1;transform:translateY(0);}}
+@-webkit-keyframes afb{from{opacity:0;-webkit-transform:translateY(50px);}to{opacity:1;-webkit-transform:translateY(0);}}
